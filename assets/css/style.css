@@ -9,10 +9,11 @@
     left:0;
     margin:none;
     font-size:30px;
-    color:black;
+    
     
 }
 
 .nav a{
     padding:25px;
+    color:rgb(36, 36, 36);
 }
