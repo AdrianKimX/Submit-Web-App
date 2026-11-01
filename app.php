@@ -8,6 +8,8 @@
 <body>
 <div class='main'>
 
+<?php include "src/routes/routes.php";  ?>
+
 
 </div> 
 </body>
