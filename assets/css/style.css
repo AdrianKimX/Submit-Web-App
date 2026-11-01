@@ -1,0 +1,18 @@
+.nav{
+    position:fixed;
+    width:100%;
+    height:fit-content;
+    padding:10px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    top:0;
+    left:0;
+    margin:none;
+    font-size:30px;
+    color:black;
+    
+}
+
+.nav a{
+    padding:25px;
+}
