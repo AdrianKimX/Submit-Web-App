@@ -1,3 +1,10 @@
+<?php
+require __DIR__. '/src/functions/functions.php';
+require __DIR__.'/src/db/db.php';
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
