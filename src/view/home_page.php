@@ -1,6 +1,5 @@
 <?php
 
-
   ?>
 
 <div class='home-contents'>
@@ -9,5 +8,6 @@
   </div>
 
     <div class='content2'>
+      
   </div>
 </div>

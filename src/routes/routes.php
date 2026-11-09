@@ -3,6 +3,7 @@ $routes=[
 "home"=>"/../view/home_page.php",
 "login"=>"/../view/login_page.php",
 "settings"=>"/../view/settings_page.php",
+"register"=>"/../view/register_page.php",
 "messages"=>"/../view/messages_page.php"
     ];
 
