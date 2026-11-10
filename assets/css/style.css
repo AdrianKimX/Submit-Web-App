@@ -18,6 +18,11 @@
     color:rgb(36, 36, 36);
 }
 
+.nav .bi-person{
+  float:right;
+  
+}
+
 .logo{
   background-color: rgb(162, 1, 1);
     color:rgb(255, 255, 255);
@@ -53,3 +58,4 @@ height: 90vh;
 margin:3px;
 box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
+
