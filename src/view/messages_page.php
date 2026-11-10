@@ -1,7 +1,32 @@
-<?php 
+<?php
 
 
  ?>
 
+<div class="messaging-content">
 
+  <aside class="chat-list">
+    <div class="chat-list-head">Chats</div>
+    <div class="chat-item active" data-name="Alex"><span class="avatar">A</span><div><b>Alex</b><small>See you later!</small></div></div>
+    <div class="chat-item" data-name="Bianca"><span class="avatar">B</span><div><b>Bianca</b><small>Thanks!</small></div></div>
+    <div class="chat-item" data-name="Carlo"><span class="avatar">C</span><div><b>Carlo</b><small>Ok, noted.</small></div></div>
+    <div class="chat-item" data-name="Dana"><span class="avatar">D</span><div><b>Dana</b><small>Welcome aboard</small></div></div>
+  </aside>
 
+  <section class="chat-window">
+    <div class="chat-header"><span class="avatar" id="chat-avatar">A</span><b id="chat-title">Alex</b></div>
+
+    <div class="chat-body" id="chat-body">
+      <div class="bubble them">Hey! How are you?</div>
+      <div class="bubble me">I'm good, you?</div>
+      <div class="bubble them">Doing great. See you later!</div>
+    </div>
+
+    <form class="chat-form" id="chat-form" autocomplete="off">
+      <input type="text" id="chat-input" placeholder="Type a message...">
+      <button type="submit"><i class="bi bi-send-fill"></i></button>
+    </form>
+  </section>
+
+</div>
+<script src="view/view.js" defer></script>

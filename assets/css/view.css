@@ -1,0 +1,268 @@
+/* view.css - styles for the View folder pages only.
+   Load AFTER style.css. style.css is not modified. */
+
+/* ---------- Login / Register ---------- */
+.register-content{
+    width:100%;
+    min-height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    box-sizing:border-box;
+    background:rgb(248, 248, 248);
+}
+
+.form-field{
+    width:100%;
+    max-width:380px;
+    padding:28px 26px;
+    box-sizing:border-box;
+    background:rgb(255, 255, 255);
+    border-radius:8px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgba(0, 0, 0, 0.08) 0px 10px 30px -10px;
+}
+
+.form-field header{
+    font-size:24px;
+    font-weight:700;
+    color:rgb(36, 36, 36);
+    text-align:center;
+    margin-bottom:22px;
+    padding-bottom:12px;
+    border-bottom:3px solid rgb(162, 1, 1);
+}
+
+.form-field form{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+
+.input-field{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+}
+
+.input-field label{
+    font-size:14px;
+    font-weight:600;
+    color:rgb(36, 36, 36);
+}
+
+.input-field input{
+    width:100%;
+    padding:10px 12px;
+    box-sizing:border-box;
+    font-size:15px;
+    color:rgb(36, 36, 36);
+    background:rgb(255, 255, 255);
+    border:1px solid rgb(200, 200, 200);
+    border-radius:4px;
+    outline:none;
+    transition:border-color .15s, box-shadow .15s;
+}
+
+.input-field input:focus{
+    border-color:rgb(162, 1, 1);
+    box-shadow:0 0 0 3px rgba(162, 1, 1, 0.15);
+}
+
+.form-field input[type="submit"]{
+    margin-top:6px;
+    padding:11px;
+    font-size:16px;
+    font-weight:600;
+    color:rgb(255, 255, 255);
+    background-color:rgb(162, 1, 1);
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+    transition:background-color .15s, transform .05s;
+}
+
+.form-field input[type="submit"]:hover{
+    background-color:rgb(130, 0, 0);
+}
+
+.form-field input[type="submit"]:active{
+    transform:translateY(1px);
+}
+
+/* ---------- Nav icons (nav.php) ---------- */
+.nav-link{
+    display:inline-block;
+}
+
+.nav-link a{
+    text-decoration:none;
+    transition:color .15s;
+}
+
+.nav-link a:hover{
+    color:rgb(162, 1, 1);
+}
+
+/* active (filled) icon uses href="#" */
+.nav-link a[href="#"]{
+    color:rgb(162, 1, 1);
+    cursor:default;
+}
+
+/* ---------- Shared bits ---------- */
+.muted{ color:rgb(120,120,120); font-size:14px; margin:4px 0 0; }
+.avatar{
+    flex:none; width:38px; height:38px; border-radius:50%;
+    display:inline-flex; align-items:center; justify-content:center;
+    background:rgb(162, 1, 1); color:#fff; font-weight:700;
+}
+small{ display:block; color:rgb(120,120,120); font-size:12px; }
+.btn-primary{
+    padding:10px 18px; font-size:15px; font-weight:600; color:#fff;
+    background:rgb(162, 1, 1); border:none; border-radius:4px; cursor:pointer;
+}
+.btn-primary:hover{ background:rgb(130, 0, 0); }
+
+/* password toggle + footer link + strength */
+.pass-wrap{ position:relative; }
+.pass-wrap input{ padding-right:40px; }
+.pass-toggle{
+    position:absolute; right:6px; top:50%; transform:translateY(-50%);
+    background:none; border:none; cursor:pointer; font-size:16px; color:rgb(100,100,100);
+}
+.form-switch{ text-align:center; font-size:14px; margin:18px 0 0; color:rgb(100,100,100); }
+.form-switch a, .chip{ color:rgb(162, 1, 1); text-decoration:none; font-weight:600; }
+.strength{ min-height:14px; }
+.strength.s1{ color:#c0392b; } .strength.s2{ color:#d68910; }
+.strength.s3{ color:#2e86c1; } .strength.s4{ color:#1e8449; }
+
+/* ---------- Home ---------- */
+.home-contents .content1,
+.home-contents .content2{
+    background:#fff; border-radius:4px; box-sizing:border-box;
+    padding:18px; overflow-y:auto;
+}
+.panel-head h2{ margin:0; font-size:22px; color:rgb(36,36,36); }
+
+.stat-row{ display:flex; gap:10px; margin:18px 0; }
+.stat-card{
+    flex:1; padding:14px 8px; text-align:center; border-radius:6px;
+    background:rgb(250,244,244); display:flex; flex-direction:column; gap:2px;
+}
+.stat-card i{ color:rgb(162,1,1); font-size:20px; }
+.stat-card strong{ font-size:24px; color:rgb(36,36,36); }
+.stat-card span{ font-size:12px; color:rgb(120,120,120); }
+
+.search-box{ position:relative; margin-bottom:12px; }
+.search-box i{ position:absolute; left:12px; top:50%; transform:translateY(-50%); color:rgb(130,130,130); }
+.search-box input{
+    width:100%; box-sizing:border-box; padding:10px 12px 10px 36px;
+    border:1px solid rgb(200,200,200); border-radius:4px; outline:none; font-size:15px;
+}
+.search-box input:focus{ border-color:rgb(162,1,1); box-shadow:0 0 0 3px rgba(162,1,1,.15); }
+
+.contact-list{ list-style:none; margin:0; padding:0; }
+.contact-list li, .feed-item{
+    display:flex; align-items:center; gap:12px; padding:10px 6px;
+    border-bottom:1px solid rgb(238,238,238);
+}
+.contact-list li div{ flex:1; }
+.feed-item div{ flex:1; font-size:15px; }
+.chip{ padding:4px 10px; border:1px solid rgb(162,1,1); border-radius:20px; font-size:13px; }
+.chip:hover{ background:rgb(162,1,1); color:#fff; }
+
+/* ---------- Messages ---------- */
+.messaging-content{
+    width:100%; height:90vh; margin:3px; box-sizing:border-box;
+    display:flex; background:#fff; border-radius:4px;
+    box-shadow: rgba(0,0,0,.16) 0px 1px 4px; overflow:hidden;
+}
+.chat-list{ width:280px; flex:none; border-right:1px solid rgb(232,232,232); overflow-y:auto; }
+.chat-list-head{ padding:16px; font-size:18px; font-weight:700; border-bottom:1px solid rgb(232,232,232); }
+.chat-item{ display:flex; gap:12px; align-items:center; padding:12px 16px; cursor:pointer; }
+.chat-item:hover{ background:rgb(246,246,246); }
+.chat-item.active{ background:rgb(250,244,244); border-left:3px solid rgb(162,1,1); }
+
+.chat-window{ flex:1; display:flex; flex-direction:column; min-width:0; }
+.chat-header{ display:flex; align-items:center; gap:12px; padding:12px 16px; border-bottom:1px solid rgb(232,232,232); }
+.chat-body{
+    flex:1; overflow-y:auto; padding:16px; background:rgb(248,248,248);
+    display:flex; flex-direction:column; gap:8px;
+}
+.bubble{ max-width:65%; padding:9px 14px; border-radius:16px; font-size:15px; word-wrap:break-word; }
+.bubble.them{ align-self:flex-start; background:#fff; box-shadow:rgba(0,0,0,.12) 0 1px 2px; border-bottom-left-radius:4px; }
+.bubble.me{ align-self:flex-end; background:rgb(162,1,1); color:#fff; border-bottom-right-radius:4px; }
+.chat-form{ display:flex; gap:8px; padding:12px; border-top:1px solid rgb(232,232,232); }
+.chat-form input{
+    flex:1; padding:10px 14px; border:1px solid rgb(200,200,200);
+    border-radius:20px; outline:none; font-size:15px;
+}
+.chat-form input:focus{ border-color:rgb(162,1,1); }
+.chat-form button{
+    width:42px; border:none; border-radius:50%; cursor:pointer;
+    background:rgb(162,1,1); color:#fff; font-size:16px;
+}
+.chat-form button:hover{ background:rgb(130,0,0); }
+
+/* ---------- Settings ---------- */
+.settings-content{ padding:24px; height:100%; box-sizing:border-box; overflow-y:auto; }
+.settings-content h2{ margin:0 0 16px; color:rgb(36,36,36); }
+.settings-card{
+    max-width:520px; background:#fff; padding:22px; border-radius:8px;
+    box-shadow: rgba(0,0,0,.16) 0px 1px 4px; display:flex; flex-direction:column; gap:14px;
+}
+.settings-card h3{ margin:8px 0 0; font-size:16px; color:rgb(162,1,1); }
+.switch-row{ display:flex; justify-content:space-between; align-items:center; padding:6px 0; }
+.switch{
+    appearance:none; -webkit-appearance:none; width:42px; height:22px; border-radius:22px;
+    background:rgb(200,200,200); position:relative; cursor:pointer; transition:background .2s;
+}
+.switch::after{
+    content:''; position:absolute; top:2px; left:2px; width:18px; height:18px;
+    border-radius:50%; background:#fff; transition:transform .2s;
+}
+.switch:checked{ background:rgb(162,1,1); }
+.switch:checked::after{ transform:translateX(20px); }
+.settings-card .btn-primary{ align-self:flex-start; }
+.save-msg{ color:#1e8449; font-size:14px; opacity:0; transition:opacity .3s; }
+.save-msg.show{ opacity:1; }
+
+/* ---------- About ---------- */
+.about-content{ display:flex; justify-content:center; padding:30px 20px; height:100%; box-sizing:border-box; overflow-y:auto; }
+.about-card{
+    max-width:640px; width:100%; height:fit-content; padding:30px; text-align:center;
+    background:#fff; border-radius:8px; box-shadow: rgba(0,0,0,.16) 0px 1px 4px;
+}
+.logo-big{
+    display:inline-block; padding:6px 14px; font-size:26px; color:#fff;
+    background:rgb(162,1,1); border-radius:4px;
+}
+.about-card h2{ margin:16px 0 8px; color:rgb(36,36,36); }
+.about-card p{ color:rgb(90,90,90); line-height:1.6; }
+.about-grid{ display:flex; gap:12px; margin-top:22px; flex-wrap:wrap; }
+.about-grid div{
+    flex:1; min-width:140px; padding:16px 10px; border-radius:6px; background:rgb(250,244,244);
+    display:flex; flex-direction:column; gap:4px;
+}
+.about-grid i{ font-size:24px; color:rgb(162,1,1); }
+.about-grid span{ font-size:13px; color:rgb(110,110,110); }
+
+/* ---------- Dark mode (toggled from Settings; only affects View content) ---------- */
+body.dark .register-content,
+body.dark .chat-body{ background:rgb(24,24,24); }
+body.dark .form-field, body.dark .settings-card, body.dark .about-card,
+body.dark .messaging-content, body.dark .chat-list, body.dark .chat-window,
+body.dark .home-contents .content1, body.dark .home-contents .content2{
+    background:rgb(34,34,34); color:rgb(230,230,230);
+}
+body.dark .form-field header, body.dark .input-field label, body.dark .panel-head h2,
+body.dark .settings-content h2, body.dark .about-card h2, body.dark .stat-card strong{ color:rgb(235,235,235); }
+body.dark .input-field input, body.dark .search-box input, body.dark .chat-form input{
+    background:rgb(44,44,44); color:#fff; border-color:rgb(70,70,70);
+}
+body.dark .bubble.them{ background:rgb(52,52,52); color:#fff; }
+body.dark .stat-card, body.dark .about-grid div, body.dark .chat-item.active{ background:rgb(48,38,38); }
+body.dark .chat-item:hover{ background:rgb(44,44,44); }
+body.dark .contact-list li, body.dark .feed-item, body.dark .chat-header,
+body.dark .chat-form, body.dark .chat-list, body.dark .chat-list-head{ border-color:rgb(60,60,60); }

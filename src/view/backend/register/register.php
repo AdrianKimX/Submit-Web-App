@@ -6,7 +6,7 @@ $password= trim($_POST['password']);
 
 $rand= rand(9000009,time());
 
-//md5() will be use to next update
+//md5() will be use for next update
 
 if($password!=null && $username!=null){
 
