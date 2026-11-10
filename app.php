@@ -17,7 +17,11 @@ require __DIR__.'/src/db/db.php';
     <title>Submit</title>
 </head>
 <body>
-  <?php include "src/view/nav.php";  ?>
+  <?php
+if ($_SERVER['REQUEST_URI']!='/?page=login'){
+ include "src/view/nav.php";
+}
+   ?>
 <div class='main'>
 
 <?php include "src/routes/routes.php";  ?>
