@@ -35,7 +35,7 @@ if (isset($_SESSION['user_id'])){ ?>
 <?php }else{?>
 
 
-<a class='bi bi-box-arrow-in-left<?= $house ?>' href='<?=$l_link?>'>Login</a>
+<a class='bi bi-box-arrow-in-right<?= $house ?>' href='<?=$l_link?>'>Login</a>
 
 
 

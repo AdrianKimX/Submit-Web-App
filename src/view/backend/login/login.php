@@ -17,7 +17,7 @@ if($db->query($sql)){
 if($password===$row['password'] ){
 $_SESSION['user_id']= $row['user_id'];
 
-header('location: ?page=home');
+header('location: /?page=home');
 exit;
 
 }
