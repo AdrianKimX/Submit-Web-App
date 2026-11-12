@@ -1,5 +1,5 @@
 <?php
-if(!isset($_SESSION['user_id'])){
+
 if(isset($_POST['login'])){
 $username=trim($_POST['username']);
 $password= trim($_POST['password']);
@@ -32,10 +32,7 @@ exit;
 }
 
 
-}else{
-    header('location: ?page=home');
-    exit;
-}
+
 
 
 

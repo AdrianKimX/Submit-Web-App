@@ -20,9 +20,9 @@ require __DIR__.'/src/db/db.php';
 <body>
   <?php
   session_start();
-if ($_SERVER['REQUEST_URI']!='/?page=login'){
+
  include "src/view/nav.php";
-}
+
    ?>
 <div class='main'>
 
