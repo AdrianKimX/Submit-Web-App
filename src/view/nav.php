@@ -21,10 +21,16 @@ $a_link='#';
 ?>
 <div class='nav'>
 <div class='logo'>Logo</div>
+<?php 
+if (isset($_GET['page'])){
+if (isset($routes[$_GET['page']])){
+    if( $_SERVER['REQUEST_URI']!='/'){  ?>
 <div class='nav-link'>
 <a class='bi bi-house<?= $house ?>' href='<?=$h_link?>'></a>
 <a class='bi bi-chat<?= $chat ?>' href='<?=$m_link?>'></a>
 <a class='bi bi-gear<?= $gear ?>' href='<?=$s_link?>'></a>
-<a class='bi bi-person<?= $person ?>' href='<?=$a_link?>'></a>
+
 </div>
+<?php }}}?>
 </div>
+

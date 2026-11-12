@@ -5,7 +5,6 @@
 <div class='home-contents'>
   <div class='content1'>
     <div class="panel-head">
-      <h2>Welcome back<?php if(isset($_SESSION['username'])) echo ', '.htmlspecialchars($_SESSION['username']); ?> 👋</h2>
       <p class="muted">Here's what's happening today.</p>
     </div>
 

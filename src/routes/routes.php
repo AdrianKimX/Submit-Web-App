@@ -10,13 +10,16 @@ $routes=[
 
 if(isset($_GET['page'])){
 if(isset($routes[$_GET['page']])){
-    session_start();
+ 
     include_once __DIR__. $routes[$_GET['page']];
     
 }else{
+   
     include_once "src/view/index_page.php";
+
 }
 }else{
+   
  include_once "src/view/index_page.php";
 }
 ?>

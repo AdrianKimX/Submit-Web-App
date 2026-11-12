@@ -1,5 +1,5 @@
 <?php
-
+if(!isset($_SESSION['user_id'])){
 if(isset($_POST['login'])){
 $username=trim($_POST['username']);
 $password= trim($_POST['password']);
@@ -16,6 +16,7 @@ if($db->query($sql)){
     $row = mysqli_fetch_assoc($sql_query);
 if($password===$row['password'] ){
 $_SESSION['user_id']= $row['user_id'];
+
 header('location: ?page=home');
 exit;
 
@@ -31,7 +32,10 @@ exit;
 }
 
 
-
+}else{
+    header('location: ?page=home');
+    exit;
+}
 
 
 
