@@ -1,6 +1,6 @@
 <?php 
 
-include_once "backend/messages/messages.php";
+
 
 ?>
 
@@ -15,10 +15,7 @@ include_once "backend/messages/messages.php";
     <div class="chat-list-head">Chats</div>
    <?php 
 
-foreach($message_array as $my_messages){
-
-echo  $my_messages;
-}
+include_once "backend/messages/messages.php";
 
 ?>
   </aside>
