@@ -11,6 +11,8 @@ $db=db($db_decode);
 
 
 
+}else{
+    echo "cant find db.json";
 }
 
 
