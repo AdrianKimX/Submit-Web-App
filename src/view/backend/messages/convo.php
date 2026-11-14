@@ -3,7 +3,7 @@
 
 
 <?php 
-
+if(isset($_GET['chat'])){
 $sql ="SELECT * FROM users where user_id='{$_GET['chat']}'";
 
 if($db->query($sql)){
@@ -62,7 +62,7 @@ echo $message;
 
 }
 
-
+}
  
 
 
