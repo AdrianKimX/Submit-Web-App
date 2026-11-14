@@ -12,7 +12,7 @@ while($row=mysqli_fetch_assoc($sql_query)){
 $sql_msg= "SELECT * FROM msg where (incoming_msg_id={$row['user_id']} OR  outgoing_msg_id={$row['user_id']})
  AND
 (incoming_msg_id={$_SESSION['user_id']} OR  outgoing_msg_id={$_SESSION['user_id']}) 
-ORDER BY date_created asc  ";
+ORDER BY date_created desc  ";
 
 if($db->query($sql_msg)){
 $sql_query2= $db->query($sql_msg);
@@ -21,10 +21,8 @@ if($sql_query2->num_rows>0){
 $row2=mysqli_fetch_assoc($sql_query2);
 $row_user_id=$row['user_id'];
 $msg=$row2['message'];
-$outgoing_msg = "<div class='chat-item outgoing-latest-msg'><a href='/?page=message&chat=".$row_user_id."'><b>".$row['username']."</b><br><small>you: ".$msg. "</small></a></div>";
-$incoming_msg ="<div class='chat-item incoming-latest-msg'><a href='/?page=message&chat=".$row_user_id."'><b>".$row['username']."</b><br><small>".$msg. "</small></a></div>" ;
 
-$message=$row2['outgoing_msg_id'] == $_SESSION['user_id'] ? $outgoing_msg: $incoming_msg;
+
 
         $row['last_message_id'] =isset($row2['outgoing_msg_id']) ? $row2['outgoing_msg_id'] : '';
         $row['last_message'] =isset($row2['message']) ? $msg : '';
@@ -47,24 +45,19 @@ $message=$row2['outgoing_msg_id'] == $_SESSION['user_id'] ? $outgoing_msg: $inco
         }else{
            $sorted_row['last_message'];
         }
-
-
-          $msg='';
-      if($sorted_row['last_message_id'] == $_SESSION['user_id']){ 
-        
+       
                 $msg =$sorted_row['last_message'];
 
+    
         
-        }
         
-        
-        $output .= '<a href="?user_id='. $sorted_row['user_id'] .'">
-        <div class="content">
-        <div class="details">
-            <span>'.  $sorted_row['username'] . '</span>
-            <p>'. ($sorted_row['last_message_id'] == $_SESSION['user_id']  ? 'You: ':''). $msg.'</p>
-        </div>
- </div></a>'; 
+        $output .= '<a href="/?page=messages&chat='. $sorted_row['user_id'] .'">
+        <div class="chat-item">
+      <span class="avatar"></span>
+        <div>    <b>'.  $sorted_row['username'] . '</b>
+            <small>'. ($sorted_row['last_message_id'] == $_SESSION['user_id']  ? 'You: ':''). $msg.'</small>
+       
+ </div></div></a>'; 
  
 
  }
@@ -73,9 +66,12 @@ $message=$row2['outgoing_msg_id'] == $_SESSION['user_id'] ? $outgoing_msg: $inco
 
 echo $output;
 
+
+
+file_put_contents("convo.json",json_encode($convo_list_arr));
 }
 
 
 
 
-?>
+?>   <div class="chat-item" data-name="Dana"><span class="avatar">D</span><div><b>Dana</b><small>Welcome aboard</small></div></div>
