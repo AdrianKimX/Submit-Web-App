@@ -35,8 +35,8 @@ if($sql_query2->num_rows>0){
 
 while($row2=$sql_query2->fetch_assoc()){
 
-$outgoing_msg = "<div class='bubble me'><a href='/?page=message&chat=".$row['user_id']."'><b>".$row['username']."</b><br><small>you: ".$row2['message']. "</small></a></div>";
-$incoming_msg ="<div class='bubble them'><a href='/?page=message&chat=".$row['user_id']."'><b>".$row['username']."</b><br><small>".$row2['message']. "</small></a></div>" ;
+$outgoing_msg = "<div class='bubble me'><br><small>".$row2['message']. "</small></div>";
+$incoming_msg ="<div class='bubble them'><br><small>".$row2['message']. "</small></div>" ;
 
 $messages=$row2['outgoing_msg_id'] == $_SESSION['user_id'] ? $outgoing_msg: $incoming_msg;
 

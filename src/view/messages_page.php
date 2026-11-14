@@ -30,19 +30,19 @@ if(isset($_GET['chat'])){
 
 include_once "backend/messages/convo.php";
 
-
-}
+include_once "backend/messages/send_message.php";
 ?>
 
 
 
 
- <form class="chat-form" id="chat-form" autocomplete="off">
-      <input type="text" id="chat-input" placeholder="Type a message...">
-      <button type="submit"><i class="bi bi-send-fill"></i></button>
+ <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])."?page=messages&chat=".$_GET['chat'] ;?>" method="POST" class="chat-form" id="chat-form" autocomplete="off">
+      <input type="text" name="message" id="chat-input" placeholder="Type a message...">
+      <button name="send" type="submit"><i class="bi bi-send-fill"></i></button>
     </form>
   </section>
-
+<?php }
+  ?>
 
 </div>
 
