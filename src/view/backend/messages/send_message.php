@@ -22,7 +22,7 @@ VALUES('{$rand_id}', '{$row_user['user_id']}', '{$_SESSION['user_id']}', '{$mess
 
 
 if($db->query($sql_insert)){
-$query_insert=$db->query($sql_insert);
+
 
 header('location: ?page=messages&chat='.$_GET['chat']);
 exit;
