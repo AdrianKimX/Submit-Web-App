@@ -74,4 +74,4 @@ file_put_contents("convo.json",json_encode($convo_list_arr));
 
 
 
-?>   <div class="chat-item" data-name="Dana"><span class="avatar">D</span><div><b>Dana</b><small>Welcome aboard</small></div></div>
+?>   
