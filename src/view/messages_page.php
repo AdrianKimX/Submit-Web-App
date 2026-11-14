@@ -1,34 +1,51 @@
-<?php
+<?php 
 
 
- ?>
+
+?>
+
 
 <div class="messaging-content">
 
-  <aside class="chat-list">
+
+
+<aside class="chat-list">
     <div class="chat-list-head">Chats</div>
-    <div class="chat-item active" data-name="Alex"><span class="avatar">A</span><div><b>Alex</b><small>See you later!</small></div></div>
-    <div class="chat-item" data-name="Bianca"><span class="avatar">B</span><div><b>Bianca</b><small>Thanks!</small></div></div>
-    <div class="chat-item" data-name="Carlo"><span class="avatar">C</span><div><b>Carlo</b><small>Ok, noted.</small></div></div>
-    <div class="chat-item" data-name="Dana"><span class="avatar">D</span><div><b>Dana</b><small>Welcome aboard</small></div></div>
+   <?php 
+
+include_once "backend/messages/messages.php";
+
+?>
+
   </aside>
 
+
+
   <section class="chat-window">
-    <div class="chat-header"><span class="avatar" id="chat-avatar">A</span><b id="chat-title">Alex</b></div>
 
-    <div class="chat-body" id="chat-body">
-     
-      <div
-       class="bubble them"> <p>Nov 10 2026 22:30 PM</p><br>Hey! How are you?</div>
-      <div class="bubble me"><p>Nov 10 2026 22:35 PM</p><br>I'm good, you?</div>
-      <div class="bubble them"><p>Nov 10 2026 22:36 PM</p><br>Doing great. See you later!</div>
-    </div>
+     <?php 
+if(isset($_GET['chat'])){
 
-    <form class="chat-form" id="chat-form" autocomplete="off">
-      <input type="text" id="chat-input" placeholder="Type a message...">
-      <button type="submit"><i class="bi bi-send-fill"></i></button>
+
+
+include_once "backend/messages/convo.php";
+
+include_once "backend/messages/send_message.php";
+?>
+
+
+
+
+ <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])."?page=messages&chat=".$_GET['chat'] ;?>" method="POST" class="chat-form" id="chat-form" autocomplete="off">
+      <input type="text" name="message" id="chat-input" placeholder="Type a message...">
+      <button name="send" type="submit"><i class="bi bi-send-fill"></i></button>
     </form>
   </section>
+<?php }
+  ?>
 
 </div>
+
+
+
 <script src="view/view.js" defer></script>

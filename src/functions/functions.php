@@ -14,5 +14,22 @@ echo "cannot connect";
 }
 
 
+function user_type($x){
+
+$sql="SELECT user_id FROM users where user_id='{$X}'";
+
+if($db->query($sql)){
+
+$row_user_type = $db->query($sql)->fetch_assoc();
+
+echo $row_user_type['user_type'];
+}else{
+    echo 'error with the query';
+
+}
+
+}
+
+
 
 ?>

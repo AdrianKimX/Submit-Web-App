@@ -19,9 +19,10 @@ require __DIR__.'/src/db/db.php';
 </head>
 <body>
   <?php
-if ($_SERVER['REQUEST_URI']!='/?page=login'){
+  session_start();
+
  include "src/view/nav.php";
-}
+
    ?>
 <div class='main'>
 

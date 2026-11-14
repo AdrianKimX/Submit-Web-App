@@ -30,7 +30,7 @@
 
   <div><input type='submit' value="Change password"></div>
   <div><input type='submit' value="Change Admin Name"></div>
-  <div>Log Out</div>
+  <div><a class='bi bi-box-arrow-in-left' href='?page=logout'>Log Out</a></div>
   
 </div>
 <script src="view/view.js" defer></script>
